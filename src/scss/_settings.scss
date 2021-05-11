@@ -38,6 +38,7 @@ header {
 
 main {
 	flex: 1 0 auto;
+	overflow: hidden;
 }
 
 footer {
@@ -74,8 +75,8 @@ footer {
 
 @media (max-width: $md3+px) and (orientation: portrait) {
 	.container {
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 }
 

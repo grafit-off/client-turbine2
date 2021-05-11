@@ -1,0 +1,203 @@
+.hero {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 123px;
+		right: 27.5%;
+
+		width: 380px;
+		height: 125px;
+
+		background: url(../../img/hero-notifications.png) center/contain no-repeat;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 129px;
+		right: 9.6%;
+
+		width: 714px;
+		height: 876px;
+
+		background: url(../../img/hero-phone.png) center/cover no-repeat;
+	}
+	@media (max-width: $md1+px) {
+		&::before {
+			right: 20%;
+		}
+		&::after {
+			right: -5%;
+		}
+	}
+	@include maxwidth(1280) {
+		&::before {
+			top: 140px;
+		}
+		&::after {
+			top: 180px;
+		}
+	}
+	@include maxwidth(1100) {
+		&::before {
+			right: 20%;
+
+			width: 280px;
+			height: 100px;
+		}
+		&::after {
+			width: 514px;
+			height: 776px;
+			right: -10%;
+		}
+	}
+	@media (max-width: $md2+px) {
+		&::after {
+			width: 414px;
+			height: 676px;
+			right: -10%;
+		}
+	}
+	@media (max-width: $md3+px) {
+		&::before {
+			right: 10%;
+
+			width: 170px;
+			height: 60px;
+		}
+		&::after {
+			width: 254px;
+			height: 376px;
+			right: -5%;
+		}
+	}
+	@include maxwidth(500) {
+		&::before {
+			top: 110px;
+		}
+		&::after {
+			top: 150px;
+			right: -20%;
+
+			height: 319px;
+		}
+	}
+	&__container {
+		position: relative;
+		z-index: 1;
+
+		display: flex;
+
+		align-items: flex-start;
+
+		max-width: 1627px;
+
+		padding-top: 291px;
+		padding-bottom: 160px;
+		@media (max-width: $md3+px) {
+			padding-top: 220px;
+		}
+		@media (max-width: $md4+px) {
+			padding-top: 200px;
+		}
+	}
+	&__info {
+		flex: 0 0 63%;
+		@include maxwidth(500) {
+			flex: 0 0 100%;
+		}
+	}
+	&__heading {
+		max-width: 929px;
+
+		margin-bottom: 43px;
+
+		color: $color-black;
+
+		font-family: $ff2;
+		font-style: italic;
+		font-weight: 800;
+		font-size: 50px;
+		line-height: 61px / 50px * 100%;
+		text-transform: uppercase;
+		@include maxwidth(1280) {
+			font-size: 40px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 25px;
+		}
+		@include maxwidth(500) {
+			max-width: 85%;
+		}
+	}
+
+	&__text {
+		max-width: 727px;
+
+		margin-bottom: 73px;
+
+		color: $color-black;
+
+		font-family: $ff;
+		font-size: 30px;
+		line-height: 36px;
+		@media (max-width: $md3+px) {
+			font-size: 15px;
+			line-height: 20px;
+		}
+		@include maxwidth(500) {
+			max-width: 100%;
+		}
+	}
+}
+.text-blue400 {
+	color: #164cff;
+}
+.text-blue300 {
+	color: #2d67ff;
+}
+.text-blue200 {
+	color: #487bff;
+}
+
+/* 
+&__image {
+		position: relative;
+		flex: 0 0 40%;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
+
+			width: 380px;
+			height: 125px;
+
+			background: url(../../img/hero-notifications.png) center/cover no-repeat;
+
+			transform: translate(-450px, -150px);
+			@include maxwidth(1024) {
+				width: 300px;
+				height: 100px;
+
+				transform: translate(-300px, -120px);
+			}
+		}
+	}
+	&__phone-image {
+		width: 100%;
+		height: 100%;
+
+		object-fit: contain;
+		transform: translate(-100px, -160px);
+		@include maxwidth(1024) {
+			width: 415px;
+			height: 676px;
+		}
+		@media (max-width: $md3+px) {
+			width: 288px;
+			height: 388px;
+		} 
+	}
+*/

@@ -1,17 +1,17 @@
 /* Normalize */
-@import "_modnormalize";
+@import "_modnormalize.scss";
 //  //
 
 /* Mixins */
-@import "_mixins";
+@import "_mixins.scss";
 //  //
 
 /*! Fonts */
-@import "_fonts";
+@import "_fonts.scss";
 //  //
 
 /* Variables */
-@import "_variables";
+@import "_variables.scss";
 //  //
 
 /* Templates */
@@ -34,19 +34,19 @@
 
 /*! Components */
 /*! Common styles */
-@import "_common";
+@import "_common.scss";
 
 /*! Settings */
-@import "_settings";
+@import "_settings.scss";
 
 /*! Header */
-@import "components/_header";
+@import "components/_header.scss";
 
-// @import "components/";
+@import "components/_hero.scss";
 
 /*! Footer */
-@import "components/_footer";
+@import "components/_footer.scss";
 
 // /*! Modals  */
-// @import "components/_modals";
-@import "_animations";
+// @import "components/_modals.scss";
+@import "_animations.scss";
