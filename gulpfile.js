@@ -1,4 +1,3 @@
-
 const { src, dest, parallel, series, watch } = require('gulp');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
@@ -45,7 +44,7 @@ const fontsStyle = (done) => {
 					let fontname = items[i].split('.');
 					fontname = fontname[0];
 					if (c_fontname != fontname) {
-						fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", 400);\r\n', cb);
+						fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", 400, "normal");\r\n', cb);
 					}
 					c_fontname = fontname;
 				}
@@ -72,7 +71,7 @@ const styles = () => {
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'expanded'
-		}).on('error', notify.onError()))
+		}).on('error', notify.onError("Error: <%= error.message %>")))
 		.pipe(rename({
 			suffix: '.min'
 		}))
@@ -119,7 +118,7 @@ const scripts = () => {
 			basepath: '@file'
 		}))
 		.pipe(sourcemaps.init())
-		.pipe(uglify().on("error", notify.onError()))
+		.pipe(uglify().on("error", notify.onError("Error: <%= error.message %>")))
 		.pipe(sourcemaps.write('.'))
 		.pipe(dest('./app/js'))
 		.pipe(browserSync.stream());
@@ -234,7 +233,7 @@ const stylesBuild = () => {
 	return src('./src/scss/**/*.scss')
 		.pipe(sass({
 			outputStyle: 'expanded'
-		}).on('error', notify.onError()))
+		}).on('error', notify.onError("Error: <%= error.message %>")))
 		.pipe(rename({
 			suffix: '.min'
 		}))
@@ -254,7 +253,7 @@ const scriptsBuild = () => {
 			prefix: '@',
 			basepath: '@file'
 		}))
-		.pipe(uglify().on("error", notify.onError()))
+		.pipe(uglify().on("error", notify.onError("Error: <%= error.message %>")))
 		.pipe(dest('./build/js'))
 }
 exports.build = series(cleanBuild, parallel(htmlIncludeBuild, scriptsBuild, fontsBuild, resourcesBuild, imgToAppBuild, svgSpritesBuild), fontsStyleBuild, stylesBuild);

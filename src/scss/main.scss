@@ -1,9 +1,9 @@
 /* Normalize */
-@import "_modnormalize.scss";
+@import "_modnormalize";
 //  //
 
 /* Mixins */
-@import "_mixins.scss";
+@import "_mixins";
 //  //
 
 /*! Fonts */
@@ -40,13 +40,13 @@
 @import "_settings";
 
 /*! Header */
-@import "components/_header.scss";
+@import "components/_header";
 
 // @import "components/";
 
 /*! Footer */
-@import "components/_footer.scss";
+@import "components/_footer";
 
 // /*! Modals  */
-// @import "components/_modals.scss";
+// @import "components/_modals";
 @import "_animations";
