@@ -9,7 +9,7 @@
 		width: 380px;
 		height: 125px;
 
-		background: url(../../img/hero-notifications.png) center/contain no-repeat;
+		background: url(../img/hero-notifications.png) center/contain no-repeat;
 	}
 	&::after {
 		content: "";
@@ -20,7 +20,7 @@
 		width: 714px;
 		height: 876px;
 
-		background: url(../../img/hero-phone.png) center/cover no-repeat;
+		background: url(../img/hero-phone.png) center/cover no-repeat;
 	}
 	@media (max-width: $md1+px) {
 		&::before {
