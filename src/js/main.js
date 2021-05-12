@@ -49,7 +49,7 @@ const videoSpeed = document.querySelector('.hero-video__btn-speed');
 
 const videoPlay = () => {
 	heroVideo.play();
-	videoSpeed.classList.add('hero-video__btn-speed--visible');
+
 	heroVideo.setAttribute('controls', 'controls');
 	videoBtn.classList.add('hero-video__button--hidden');
 	videoOverlay.classList.add('hero-video__media--hidden');
@@ -78,14 +78,14 @@ instruction.addEventListener('click', (e) => {
 })
 
 heroVideo.addEventListener('play', () => {
-	heroVideoWrapp.addEventListener('mouseenter', addClassVideoSpeed)
+	heroVideoWrapp.addEventListener('mouseover', addClassVideoSpeed)
 	heroVideoWrapp.addEventListener('mouseleave', () => {
 		videoSpeed.classList.remove('hero-video__btn-speed--visible');
 	})
 })
 heroVideo.addEventListener('pause', () => {
 	videoPaused();
-	heroVideoWrapp.removeEventListener('mouseenter', addClassVideoSpeed);
+	heroVideoWrapp.removeEventListener('mouseover', addClassVideoSpeed);
 })
 heroVideo.addEventListener('ended', () => {
 	videoPaused();
