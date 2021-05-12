@@ -93,9 +93,10 @@
 		max-width: 1627px;
 
 		padding-top: 291px;
-		padding-bottom: 160px;
+		padding-bottom: 170px;
 		@media (max-width: $md3+px) {
 			padding-top: 220px;
+			padding-bottom: 76px;
 		}
 		@media (max-width: $md4+px) {
 			padding-top: 200px;
@@ -129,6 +130,15 @@
 		@include maxwidth(500) {
 			max-width: 85%;
 		}
+		.text-blue400 {
+			color: #164cff;
+		}
+		.text-blue300 {
+			color: #2d67ff;
+		}
+		.text-blue200 {
+			color: #487bff;
+		}
 	}
 
 	&__text {
@@ -149,55 +159,284 @@
 			max-width: 100%;
 		}
 	}
-}
-.text-blue400 {
-	color: #164cff;
-}
-.text-blue300 {
-	color: #2d67ff;
-}
-.text-blue200 {
-	color: #487bff;
+	&__instruction {
+		max-width: 1514px;
+		margin: 0 auto;
+		padding: 0 15px;
+		@media (max-width: $md3+px) {
+			padding: 0 45px;
+		}
+	}
 }
 
-/* 
-&__image {
+.instruction {
+	&__container {
+		padding: 17px 22px;
+
+		border: 1px solid #838383;
+		border-radius: 10px;
+		@media (max-width: $md3+px) {
+			padding: 7px;
+		}
+	}
+	&__wrapper {
+		display: flex;
+
+		padding: 66px 57px;
+
+		border: 1px solid rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 0px 100px rgba(245, 245, 245, 0.1);
+		border-radius: 10px;
+		background-color: $color-white;
+		color: $color-black;
+
+		@include maxwidth(1100) {
+			padding: 40px 30px;
+		}
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+			align-items: center;
+
+			padding: 20px 12px 34px 12px;
+
+			text-align: center;
+		}
+	}
+	&__video {
+		flex: 0 0 49%;
+
+		height: 324px;
+
+		margin-right: 75px;
+		@media (max-width: $md1+px) {
+			height: auto;
+		}
+		@include maxwidth(1100) {
+			margin-right: 30px;
+		}
+		@media (max-width: $md3+px) {
+			order: 1;
+
+			flex: auto;
+
+			height: 324px;
+
+			margin-right: 0;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__info {
+		flex: 0 1 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		@media (max-width: $md3+px) {
+			order: 0;
+			align-items: center;
+		}
+	}
+
+	&__heading {
+		margin-bottom: 24px;
+
+		font-family: $ff2;
+		font-weight: 600;
+		font-size: 27px;
+		line-height: 33px;
+		@media (max-width: $md2+px) {
+			font-size: 22px;
+			line-height: 27px;
+		}
+
+		@media (max-width: $md3+px) {
+			font-size: 17px;
+			line-height: 21px;
+		}
+	}
+
+	&__text {
 		position: relative;
-		flex: 0 0 40%;
+		max-width: 350px;
+
+		margin-bottom: 32px;
+
+		font-family: $ff;
+		font-weight: 400;
+		font-size: 25px;
+		line-height: 30px;
 		&::after {
 			content: "";
 			position: absolute;
-			top: 0;
+			bottom: 0;
 			right: 0;
-			z-index: -1;
 
-			width: 380px;
-			height: 125px;
+			width: 114px;
+			height: 131px;
 
-			background: url(../../img/hero-notifications.png) center/cover no-repeat;
+			background: url(../img/hero-instr-icon.svg) center/cover no-repeat;
+			transform: translate(45px, 94px);
+		}
+		@media (max-width: $md2+px) {
+			font-size: 20px;
+			line-height: 25px;
+			&::after {
+				transform: translate(20px, 94px);
+			}
+		}
+		@media (max-width: $md3+px) {
+			max-width: none;
 
-			transform: translate(-450px, -150px);
-			@include maxwidth(1024) {
-				width: 300px;
-				height: 100px;
-
-				transform: translate(-300px, -120px);
+			font-size: 15px;
+			line-height: 20px;
+			&::after {
+				display: none;
 			}
 		}
 	}
-	&__phone-image {
+
+	&__watch {
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+		&--mobile {
+			display: none;
+
+			text-align: center;
+			@media (max-width: $md3+px) {
+				display: block;
+				order: 2;
+			}
+		}
+	}
+}
+.hero-video {
+	position: relative;
+	&__media {
+		position: relative;
+
+		height: 100%;
+
+		filter: blur(5px);
+		border-radius: 10px;
+
+		transition: filter 1s ease;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+
+			border-radius: 10px;
+			background-color: rgba(0, 0, 0, 0.3);
+			transition: opacity 1s ease, visibility 1s ease;
+		}
+		@media (max-width: $md3+px) {
+			border: 1px solid #838383;
+			border-radius: 10px;
+			filter: none;
+			filter: blur(1px);
+			&::before {
+				border-radius: 10px;
+				background-color: rgba(255, 255, 255, 0.8);
+			}
+		}
+		&--hidden {
+			filter: none;
+			transition: filter 1s ease;
+			&::before {
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 1s ease, visibility 1s ease;
+			}
+		}
+	}
+
+	&__video {
+		display: block;
 		width: 100%;
 		height: 100%;
 
-		object-fit: contain;
-		transform: translate(-100px, -160px);
-		@include maxwidth(1024) {
-			width: 415px;
-			height: 676px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+
+		width: 84px;
+		height: 84px;
+
+		border-radius: 50%;
+		background: url(../img/video-hero-btn.svg) right 43% top 50%/35px 32px no-repeat #fff;
+		background-color: $color-white;
+
+		transform: translate(-50%, -50%);
+		transition: transform 0.4s cubic-bezier(0.5, 3, 0, 1), opacity 1s ease, visibility 1s ease;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			width: 95px;
+			height: 95px;
+
+			border-radius: 50%;
+			border: 1px solid $color-white;
+			transform: translate(-50%, -50%);
+		}
+
+		@media (min-width: $md3+px) {
+			&:hover {
+				transform: translate(-50%, -50%) scale(1.05, 1.05);
+				transition: transform 0.4s cubic-bezier(0.5, 3, 0, 1), opacity 1s ease, visibility 1s ease;
+			}
+			&:focus {
+				transform: translate(-50%, -50%) scale(1.05, 1.05);
+				transition: transform 0.4s cubic-bezier(0.5, 3, 0, 1);
+			}
 		}
 		@media (max-width: $md3+px) {
-			width: 288px;
-			height: 388px;
-		} 
+			width: 55px;
+			height: 55px;
+
+			background: url(../img/video-hero-btn.svg) right 43% top 50%/24px 24px no-repeat #fff;
+
+			&::after {
+				width: 62px;
+				height: 62px;
+			}
+		}
+		&--hidden {
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 1s ease, visibility 1s ease;
+		}
 	}
-*/
+	&__btn-speed {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+
+		visibility: hidden;
+
+		opacity: 0;
+		color: $color-black;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+
+		&--visible {
+			visibility: visible;
+			opacity: 1;
+			color: $color-black;
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+		}
+	}
+}
