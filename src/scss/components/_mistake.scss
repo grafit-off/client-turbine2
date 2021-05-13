@@ -1,11 +1,11 @@
 .mistakes {
 	padding-top: 303px;
+	padding-bottom: 263px;
 	@media (max-width: $md2+px) {
-		padding-top: 240px;
-	}
-	@media (max-width: $md3+px) {
 		padding-top: 190px;
+		padding-bottom: 190px;
 	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;
