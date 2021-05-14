@@ -43,6 +43,10 @@
 		font-size: 30px;
 		line-height: 41px;
 		text-align: center;
+		@include maxwidth(1250) {
+			font-size: 20px;
+			line-height: 30px;
+		}
 		&--margin {
 			max-width: 658px;
 			margin-bottom: 136px;
@@ -51,9 +55,16 @@
 			}
 		}
 		&--strong {
+			display: block;
 			margin-bottom: 10px;
 
 			font-weight: 700;
+			@include maxwidth(1250) {
+				margin-bottom: 30px;
+			}
+			@media (max-width: $md3+px) {
+				margin-bottom: 20px;
+			}
 		}
 		&--align-left {
 		}
@@ -72,8 +83,11 @@
 		width: 100%;
 
 		margin-bottom: 121px;
+		@include maxwidth(1250) {
+			margin-bottom: 30px;
+		}
 		@media (max-width: $md3+px) {
-			margin-bottom: 33px;
+			margin-bottom: 22px;
 		}
 	}
 
@@ -82,6 +96,9 @@
 
 		&:not(:last-child) {
 			margin-bottom: 30px;
+			@media (max-width: $md3+px) {
+				margin-bottom: 22px;
+			}
 		}
 		&::before {
 			content: "";
@@ -93,8 +110,23 @@
 			height: 144px;
 
 			transform: translate(30%, -50%);
-		}
+			@include maxwidth(1250) {
+				width: 100px;
+				height: 100px;
 
+				transform: translate(63%, -50%);
+			}
+
+			@media (max-width: $md3+px) {
+				width: 60px;
+				height: 60px;
+			}
+			@media (max-width: $md4+px) {
+				width: 50px;
+				height: 50px;
+				transform: translate(25%, -50%);
+			}
+		}
 		&::after {
 			content: "";
 			position: absolute;
@@ -122,22 +154,40 @@
 			.chanel__item-text {
 				width: 460px;
 			}
+			@include maxwidth(1250) {
+				margin-right: 0;
+				.chanel__item-text {
+					width: 100%;
+				}
+			}
 		}
 		&:last-child {
 			&::after {
 				display: none;
+				@include maxwidth(1250) {
+					display: block;
+				}
 			}
 		}
 		&--pointer {
 			align-self: flex-start;
+			@media (max-width: $md1+px) {
+				margin-left: 66px;
+			}
 			&::before {
 				background: url(../img/chanel-icon-pointer.png) center/contain no-repeat;
+			}
+			@include maxwidth(1250) {
+				margin-right: 0;
 			}
 		}
 		&--inst {
 			align-self: flex-end;
 			&::before {
 				background: url(../img/chanel-icon-inst.png) center/contain no-repeat;
+			}
+			@include maxwidth(1250) {
+				margin-right: 0;
 			}
 		}
 		&--tg {
@@ -149,11 +199,36 @@
 			.chanel__item-text {
 				width: 500px;
 			}
+
+			@include maxwidth(1250) {
+				.chanel__item-text {
+					width: 100%;
+				}
+			}
 		}
 		&--note {
 			align-self: flex-end;
 			&::before {
 				background: url(../img/chanel-icon-note.png) center/contain no-repeat;
+			}
+		}
+		@include maxwidth(1250) {
+			width: 100%;
+			margin-right: 0;
+			margin-left: 0;
+			&::after {
+				left: 50% !important;
+
+				width: 1px;
+				height: 31px;
+
+				border: 1px solid #0047ff;
+				background: none;
+
+				transform: translate(-50%, 100%) rotate(0) !important;
+				@media (max-width: $md3+px) {
+					height: 22px;
+				}
 			}
 		}
 	}
@@ -181,11 +256,47 @@
 		font-size: 30px;
 		line-height: 41px;
 		text-align: left;
+
+		@media (max-width: $md1+px) {
+			font-size: 25px;
+			line-height: 30px;
+		}
+		@include maxwidth(1250) {
+			display: block;
+			max-width: none;
+		}
 		@media (max-width: $md3+px) {
+			padding: 30px 30px 30px 120px;
+
 			font-size: 15px;
 			line-height: 20px;
 		}
+		@media (max-width: $md4+px) {
+			padding: 25px 25px 25px 80px;
+		}
 	}
 	&__info {
+		@include maxwidth(1250) {
+			position: relative;
+
+			padding: 25px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				width: 100%;
+				height: 100%;
+
+				border: 1px solid #0047ff;
+				border-radius: 10px;
+				filter: drop-shadow(0px 0px 4px rgba(0, 26, 255, 0.2));
+			}
+			@media (max-width: $md4+px) {
+				padding: 25px 5px;
+			}
+		}
 	}
 }
