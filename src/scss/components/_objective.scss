@@ -26,11 +26,33 @@
 		justify-content: center;
 
 		background: url(../../img/objective-walp.png) center/auto 100% no-repeat;
+		@media (max-width: $md3+px) {
+			background: url(../img/objective-walp.png) top 55% center / auto 70% no-repeat;
+			padding-bottom: 50px;
+		}
+		@include maxwidth(350) {
+			background: url(../img/objective-walp.png) top 55% center / auto 60% no-repeat;
+		}
 	}
 
 	&__heading {
 		max-width: 1000px;
 		margin-bottom: 302px;
+		@include maxwidth(992) {
+			margin-bottom: 150px;
+		}
+		@media (max-width: $md3+px) {
+			margin-bottom: 35px;
+		}
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+		&--hidden {
+			display: none;
+			@media (max-width: $md3+px) {
+				display: block;
+			}
+		}
 	}
 
 	&__list {
@@ -39,6 +61,13 @@
 		width: 100%;
 		margin-bottom: 350px;
 		counter-reset: objective-list;
+		@include maxwidth(992) {
+			margin-bottom: 150px;
+		}
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+			margin-bottom: 50px;
+		}
 	}
 
 	&__item {
@@ -60,6 +89,13 @@
 			line-height: 87px;
 			color: #001aff;
 			text-shadow: 0px 0px 2px #0047ff;
+			@media (max-width: $md2+px) {
+				font-size: 70px;
+				line-height: 65px;
+			}
+			@media (max-width: $md3+px) {
+				margin-right: 20px;
+			}
 		}
 		&:nth-child(1) {
 			align-items: flex-end;
@@ -67,6 +103,35 @@
 		}
 		&:nth-child(2) {
 			align-items: flex-start;
+		}
+		@media (max-width: $md1+px) {
+			flex: 0 0 35%;
+		}
+		@include maxwidth(1300) {
+			flex: 0 0 32%;
+			font-size: 25px;
+			line-height: 35px;
+		}
+
+		@media (max-width: $md2+px) {
+			font-size: 22px;
+			line-height: 32px;
+		}
+
+		@media (max-width: $md3+px) {
+			flex: 0 0 100%;
+			flex-direction: row;
+			font-size: 20px;
+			line-height: 27px;
+			&:nth-child(1) {
+				align-items: flex-end;
+				margin-bottom: 354px;
+
+				text-align: left;
+			}
+			&:nth-child(2) {
+				align-items: flex-end;
+			}
 		}
 	}
 

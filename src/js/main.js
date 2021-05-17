@@ -147,3 +147,40 @@ swiperVideos.forEach((el) => {
 		videosButtons.classList.remove('hero-video__button--hidden');
 	})
 });
+
+
+
+// Accodions
+const accordionTrigger = document.querySelectorAll(".accordion__trigger"),
+	accordionBody = document.querySelectorAll(".accordion__body");
+
+const accordionsToggle = (triggers, bodyElements) => {
+	triggers.forEach((el) => {
+		el.addEventListener("click", () => {
+			el.disabled = true;
+			setTimeout(() => {
+				el.disabled = false;
+			}, 500);
+			const elBody = el.closest(".accordion__item").querySelector(".accordion__body");
+			el.classList.toggle('accordion__trigger--active');
+			elBody.style.height = `${elBody.scrollHeight}px`;
+			if (elBody.style.height === "0px" || window.getComputedStyle(elBody).height === "0px") {
+				el.setAttribute("aria-expanded", "true");
+				elBody.setAttribute("aria-hidden", "false");
+			} else {
+				elBody.style.height = "0";
+				el.setAttribute("aria-expanded", "false");
+				elBody.setAttribute("aria-hidden", "true");
+			}
+		});
+	});
+	bodyElements.forEach((el) => {
+		el.addEventListener("transitionend", () => {
+			if (el.style.height !== "0px") {
+				el.style.height = "auto";
+			}
+		});
+	});
+};
+accordionsToggle(accordionTrigger, accordionBody);
+// -- //

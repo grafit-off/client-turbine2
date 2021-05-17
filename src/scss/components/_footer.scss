@@ -1,56 +1,81 @@
-// Snackbar
-.snackbar {
-	position: fixed;
-	bottom: 30px;
-	right: 50px;
-	z-index: 1;
-
-	width: auto;
-	min-width: 200px;
-	padding: 15px;
-	visibility: hidden;
-
-	border-radius: 2px;
-
-	color: #fff;
-
-	text-align: center;
+.footer {
+	padding: 75px 0;
+	background-color: #0047ff;
 	@media (max-width: $md3+px) {
-		right: 50%;
-		transform: translateX(50%);
+		padding: 35px 0;
 	}
-}
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
 
-.snackbar.show-notification {
-	visibility: visible;
-	background-color: #333;
-	/* Если 3000 в js, то в стилях 2.6s */
-	animation: fadein 0.5s, fadeout 0.5s 2.6s;
-}
-.snackbar.show-attention {
-	visibility: visible;
-	background-color: rgb(255, 96, 96);
-	/* Если 3000 в js, то в стилях 2.6s */
-	animation: fadein 0.5s, fadeout 0.5s 2.6s;
-}
-@keyframes fadein {
-	from {
-		bottom: 0;
-		opacity: 0;
-	}
-	to {
-		bottom: 30px;
-		opacity: 1;
-	}
-}
+	&__left {
+		flex: 1 0 50%;
 
-@keyframes fadeout {
-	from {
-		bottom: 30px;
-		opacity: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		@media (max-width: $md2+px) {
+			flex: 0 0 100%;
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
-	to {
-		bottom: 0;
-		opacity: 0;
+
+	&__logo {
+		width: 345px;
+		height: 133px;
+		margin-right: 20px;
+
+		object-fit: contain;
+		@media (max-width: $md2+px) {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+		@media (max-width: $md3+px) {
+			width: 233px;
+			height: 90px;
+		}
+	}
+
+	&__text {
+		display: block;
+		max-width: 450px;
+		margin-right: 20px;
+		color: #ffffff;
+
+		font-size: 20px;
+		line-height: 27px;
+		@media (max-width: $md2+px) {
+			margin-right: 0;
+			margin-bottom: 50px;
+
+			text-align: center;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		flex: 0 0 30%;
+
+		color: #ffffff;
+		font-size: 20px;
+		line-height: 27px;
+		text-decoration: underline;
+		text-decoration-skip: none;
+		@media (max-width: $md3+px) {
+			font-size: 15px;
+			line-height: 20px;
+			text-align: center;
+		}
 	}
 }
