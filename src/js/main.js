@@ -1,8 +1,4 @@
-// Includes
-// @include('_scrollLockIOS.js');
 
-// @include('_modal.js');
-// -- //
 
 const isiPhone = (navigator.userAgent.match(/iPhone/i) != null);
 const isiPad = (navigator.userAgent.match(/iPad/i) != null);
