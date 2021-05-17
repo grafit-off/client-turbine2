@@ -211,4 +211,60 @@
 		}
 	}
 }
+.video-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+
+	width: 84px;
+	height: 84px;
+
+	border-radius: 50%;
+	background: url(../img/video-hero-btn.svg) right 43% top 50%/35px 32px no-repeat #fff;
+	background-color: $color-white;
+
+	transform: translate(-50%, -50%);
+	transition: transform 0.4s cubic-bezier(0.5, 3, 0, 1), opacity 1s ease, visibility 1s ease;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		width: 95px;
+		height: 95px;
+
+		border-radius: 50%;
+		border: 1px solid $color-white;
+		transform: translate(-50%, -50%);
+	}
+
+	@media (min-width: $md3+px) {
+		&:hover {
+			transform: translate(-50%, -50%) scale(1.05, 1.05);
+			transition: transform 0.4s cubic-bezier(0.5, 3, 0, 1), opacity 1s ease, visibility 1s ease;
+		}
+		&:focus {
+			transform: translate(-50%, -50%) scale(1.05, 1.05);
+			transition: transform 0.4s cubic-bezier(0.5, 3, 0, 1);
+		}
+	}
+	@media (max-width: $md3+px) {
+		width: 55px;
+		height: 55px;
+
+		background: url(../img/video-hero-btn.svg) right 43% top 50%/24px 24px no-repeat #fff;
+
+		&::after {
+			width: 62px;
+			height: 62px;
+		}
+	}
+	&--hidden {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 1s ease, visibility 1s ease;
+	}
+}
 // -- //

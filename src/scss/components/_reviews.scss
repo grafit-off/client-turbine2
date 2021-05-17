@@ -1,0 +1,269 @@
+.reviews {
+	padding-top: 134px;
+	padding-bottom: 185px;
+	@media (max-width: $md2+px) {
+		padding-top: 81px;
+		padding-bottom: 99px;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		max-width: 1850px;
+	}
+
+	&__heading {
+		margin-bottom: 71px;
+		@media (max-width: $md3+px) {
+			margin-bottom: 35px;
+		}
+	}
+	&__swiper {
+		margin-bottom: 144px;
+	}
+	&__link {
+	}
+}
+
+.swiper {
+	position: relative;
+	z-index: 1;
+
+	overflow: hidden;
+	width: 100%;
+
+	padding: 200px 0 250px 0;
+	margin-bottom: 150px;
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+
+		width: 55px;
+		height: 30px;
+
+		background-color: rgba(0, 0, 0, 0.5);
+
+		transform: translateY(-50%);
+		cursor: pointer;
+
+		&--next {
+			right: 10%;
+			background: url(../img/swiper-arrow.svg) center/contain no-repeat;
+			transform: translate(-50%, -50%);
+		}
+		&--prev {
+			left: 10%;
+
+			background: url(../img/swiper-arrow.svg) center/contain no-repeat;
+			transform: translate(50%, -50%) rotate(180deg);
+		}
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
+	&__pagination {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		z-index: 2;
+
+		display: flex;
+
+		transform: translateX(-50%);
+		& .swiper-pagination-bullet {
+			display: block;
+
+			width: 20px;
+			height: 20px;
+
+			border-radius: 50%;
+			background-color: transparent;
+			border: 1px solid #000000;
+			cursor: pointer;
+			transition: background-color 0.3s ease, border 0.3s ease;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+		& .swiper-pagination-bullet-active {
+			background-color: #0047ff;
+			border: 1px solid #0047ff;
+			transition: background-color 0.3s ease, border 0.3s ease;
+		}
+	}
+	&__wrapper {
+		display: flex;
+
+		width: 100%;
+		height: 100%;
+	}
+	&__slide {
+		flex-shrink: 0;
+	}
+}
+
+.swiper-slide {
+	display: flex;
+	width: 100%;
+	padding: 7px 8px;
+
+	border: 1px solid #8b8b8b;
+	border-radius: 10px;
+
+	&__video-wrapp {
+		position: relative;
+
+		flex: 0 0 45%;
+
+		border-radius: 10px;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&__video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		border-radius: 10px;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&__video-btn {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background: url(../img/video-hero-btn.svg) right 43% top 50%/22px 19px no-repeat #fff;
+		&::after {
+			width: 55px;
+			height: 55px;
+		}
+	}
+
+	&__body {
+		flex: 0 0 55%;
+		padding: 15px 46px;
+		background: #f8f8f8;
+		border-radius: 10px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	&__name {
+		display: inline-block;
+		// margin-bottom: 60px;
+		margin-bottom: 28px;
+
+		color: #000000;
+
+		font-family: $ff2;
+		font-style: normal;
+		font-weight: bold;
+
+		font-size: 14px;
+		line-height: 20px;
+		@media (max-width: $md2+px) {
+			margin-bottom: 17px;
+
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 20px;
+		color: #2b2b2b;
+
+		font-size: 14px;
+		line-height: 20px;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+
+		margin-bottom: 25px;
+		color: #2b2b2b;
+
+		font-size: 14px;
+		line-height: 20px;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 25px;
+		}
+	}
+	&__prev-result {
+		margin-bottom: 28px;
+		color: #2b2b2b;
+
+		font-size: 14px;
+		line-height: 20px;
+		@media (max-width: $md3+px) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__count {
+	}
+
+	&__result {
+		margin-bottom: 65px;
+		color: #2b2b2b;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+.swiper-slide {
+	position: relative;
+	border: none;
+	transition: transform 0.5s ease, border 0.3s ease;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+
+		width: 100%;
+		height: 100%;
+
+		opacity: 1;
+		background-color: #e5e5e5;
+		filter: blur(4px);
+
+		transition: opacity 1s ease;
+	}
+}
+
+.swiper-slide-active {
+	position: relative;
+	z-index: 2;
+	border: 1px solid #8b8b8b;
+	transform: scale(2);
+	transition: transform 0.5s ease, border 0.3s ease;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+
+		opacity: 0;
+		background-color: #e5e5e5;
+		filter: blur(10px);
+
+		transition: opacity 1s ease;
+	}
+}

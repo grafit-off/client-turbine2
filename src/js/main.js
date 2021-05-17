@@ -91,3 +91,59 @@ heroVideo.addEventListener('ended', () => {
 	videoPaused();
 })
 // -- //
+
+const swiper = new Swiper(".swiper", {
+	containerModifierClass: "swiper",
+	wrapperClass: "swiper__wrapper",
+	slideClass: "swiper__slide",
+	centeredSlides: true,
+	slidesPerView: 3,
+	loop: true,
+	pagination: {
+		el: ".swiper__pagination",
+		clickable: true
+	},
+	navigation: {
+		nextEl: ".swiper__button--next",
+		prevEl: ".swiper__button--prev"
+	},
+	breakpoints: {
+		400: {
+
+		},
+		767: {
+
+		},
+		992: {
+
+		},
+		1200: {
+
+		}
+	},
+
+});
+
+
+const swiperVideosBtns = document.querySelectorAll('.video-button');
+const swiperVideos = document.querySelectorAll('.swiper-slide__video');
+swiperVideosBtns.forEach((el) => {
+	el.addEventListener('click', (e) => {
+		let video = e.target.closest('.swiper-slide__video-wrapp').querySelector('.swiper-slide__video');
+		video.play();
+		video.setAttribute('controls', 'controls');
+		el.classList.add('hero-video__button--hidden');
+	})
+});
+swiperVideos.forEach((el) => {
+	el.addEventListener('pause', () => {
+		el.removeAttribute('controls');
+		const videosButtons = el.parentNode.querySelector('.video-button');
+		videosButtons.classList.remove('hero-video__button--hidden');
+	})
+	el.addEventListener('ended', () => {
+		el.removeAttribute('controls');
+		const videosButtons = el.parentNode.querySelector('.video-button');
+		videosButtons.classList.remove('hero-video__button--hidden');
+	})
+});
