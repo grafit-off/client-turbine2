@@ -34,6 +34,34 @@ if (isiPhone || isiPad || isiPod) {
 	// -- //
 }
 
+// Active header on scroll
+const header = document.querySelector(".header");
+let prevScrollpos = window.pageYOffset;
+
+function navOpen() {
+	if (prevScrollpos != 0) {
+		header.classList.add('header--active');
+	} else {
+		header.classList.remove('header--active');
+	}
+}
+function navScroll() {
+	window.onscroll = function () {
+		let currentScrollPos = window.pageYOffset;
+		if (prevScrollpos < currentScrollPos) {
+			header.classList.add('header--active');
+		} else if (prevScrollpos = currentScrollPos) {
+			header.classList.add('header--active');
+		} else {
+			header.classList.remove('header--active');
+		}
+		prevScrollpos = currentScrollPos;
+	}
+}
+navOpen()
+navScroll()
+// -- //
+
 // Video 
 const instruction = document.querySelector('.instruction');
 const heroVideoWrapp = document.querySelector('.hero-video');

@@ -1,15 +1,39 @@
 .header {
-	position: absolute;
+	position: fixed;
 	z-index: 2;
 	width: 100%;
 
 	padding-top: 114px;
+	transition: padding 0.5s ease;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
 
+		width: 100%;
+		height: 100%;
+
+		opacity: 0;
+		background-color: rgba(255, 255, 255, 0.95);
+		filter: blur(2px);
+		transition: opacity 0.5s ease;
+	}
 	@include maxwidth(1280) {
 		padding-top: 60px;
 	}
 	@media (max-width: $md2+px) {
 		padding-top: 40px;
+	}
+	&--active {
+		padding-top: 0;
+
+		transition: padding 0.5s ease;
+		&::after {
+			opacity: 1;
+			transition: opacity 0.5s ease;
+		}
 	}
 	&__container {
 		display: flex;
