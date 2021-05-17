@@ -1,0 +1,268 @@
+.parallax-scene {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: -2;
+	width: 100%;
+	height: 100%;
+}
+.parallax-item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.parallax-img {
+	position: absolute;
+	display: block;
+	object-fit: contain;
+}
+
+.hero {
+	&__parallax-scene {
+	}
+
+	&__parallax-item {
+		&:nth-child(1) .hero__parallax-img {
+			top: 66px;
+			left: 52px;
+			@media (max-width: $md3+px) {
+				top: 50px;
+				left: -52px;
+			}
+		}
+		&:nth-child(2) .hero__parallax-img {
+			top: 111px;
+			right: -142px;
+			width: 800px;
+			height: 800px;
+			@media (max-width: $md2+px) {
+				display: none;
+			}
+		}
+		&:nth-child(3) .hero__parallax-img {
+			top: 420px;
+			left: 190px;
+			@media (max-width: $md2+px) {
+				display: none;
+			}
+		}
+	}
+	&__parallax-img {
+	}
+}
+.mistakes {
+	position: relative;
+	&__parallax-scene {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+
+	&__parallax-item {
+		&:nth-child(1) .parallax-img {
+			top: 176px;
+			left: 0px;
+
+			transform: scale(1.2) rotate(70deg);
+		}
+		&:nth-child(2) .parallax-img {
+			top: 600px;
+			right: 18%;
+
+			transform: scale(2.5) rotate(70deg);
+		}
+		&:nth-child(3) .parallax-img {
+			top: 420px;
+			right: -100px;
+			transform: scale(0.5) rotate(110deg);
+		}
+	}
+	&__parallax-img {
+	}
+}
+
+.target {
+	position: relative;
+	&__parallax-scene {
+		.parallax-item {
+			&:nth-child(1) .parallax-img {
+				top: 176px;
+				right: -100px;
+
+				transform: scale(1.2) rotate(70deg);
+			}
+			&:nth-child(2) .parallax-img {
+				bottom: 180px;
+				left: 16%;
+
+				transform: scale(1) rotate(0deg);
+			}
+			&:nth-child(3) .parallax-img {
+				top: 100px;
+				left: -250px;
+				transform: scale(1) rotate(170deg);
+			}
+		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.lead-magnet {
+	position: relative;
+	&__parallax-scene {
+		.parallax-item {
+			.parallax-img {
+				top: 0px;
+				right: -500px;
+				transform: scale(1) rotate(107deg);
+			}
+		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.steps {
+	position: relative;
+	&__parallax-scene {
+		.parallax-item {
+			&:nth-child(1) .parallax-img {
+				top: 492px;
+				left: 107px;
+
+				transform: scale(1.2) rotate(70deg);
+			}
+			&:nth-child(2) .parallax-img {
+				bottom: 0px;
+				right: 0px;
+
+				transform: scale(1) rotate(0deg);
+			}
+			&:nth-child(3) .parallax-img {
+				top: 700px;
+				right: -57px;
+
+				transform: scale(0.8) rotate(170deg);
+			}
+			&:nth-child(4) .parallax-img {
+				bottom: -369px;
+				left: -68px;
+
+				transform: scale(0.8) rotate(87deg);
+			}
+		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.chanel {
+	position: relative;
+	&__parallax-scene {
+		.parallax-item {
+			.parallax-img {
+				top: 10%;
+				right: 100px;
+				transform: scale(1.4) rotate(160deg);
+			}
+		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.functions {
+	position: relative;
+	&__parallax-scene {
+		.parallax-item {
+			&:nth-child(1) .parallax-img {
+				top: 50%;
+				right: -10px;
+
+				transform: scale(1.7) rotate(140deg);
+			}
+			&:nth-child(2) .parallax-img {
+				bottom: 0;
+				left: 330px;
+				transform: scale(1) rotate(0);
+			}
+			&:nth-child(3) .parallax-img {
+				top: 48%;
+				right: -149px;
+				transform: scale(0.8) rotate(108deg);
+			}
+		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.reviews {
+	position: relative;
+	&__parallax-scene {
+		.parallax-item {
+			&:nth-child(1) .parallax-img {
+				top: 8%;
+				left: 100px;
+				transform: scale(2.5) rotate(190deg);
+			}
+
+			&:nth-child(2) .parallax-img {
+				bottom: 17%;
+				left: 9px;
+				transform: scale(0.8) rotate(108deg);
+			}
+		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.start {
+	position: relative;
+	&__parallax-scene {
+		.parallax-item {
+			&:nth-child(1) .parallax-img {
+				top: 10%;
+				right: -54px;
+				transform: scale(1) rotate(190deg);
+			}
+
+			&:nth-child(2) .parallax-img {
+				bottom: 0;
+				left: 50px;
+				transform: scale(0.8) rotate(108deg);
+			}
+			&:nth-child(3) .parallax-img {
+				bottom: 30%;
+				right: -150px;
+				transform: scale(0.6) rotate(108deg);
+			}
+		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.questions {
+	position: relative;
+	&__parallax-scene {
+		.parallax-item {
+			&:nth-child(1) .parallax-img {
+				top: -10%;
+				right: 0;
+				transform: scale(2) rotate(190deg);
+			}
+
+			&:nth-child(2) .parallax-img {
+				top: 10%;
+				left: -200px;
+				transform: scale(0.6) rotate(108deg);
+			}
+		}
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}

@@ -184,3 +184,9 @@ const accordionsToggle = (triggers, bodyElements) => {
 };
 accordionsToggle(accordionTrigger, accordionBody);
 // -- //
+
+// Parallax
+const scenes = document.querySelectorAll('.parallax-scene');
+scenes.forEach((el) => {
+	const scene = new Parallax(el);
+});
