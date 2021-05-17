@@ -25,6 +25,8 @@
 		&:nth-child(1) .hero__parallax-img {
 			top: 66px;
 			left: 52px;
+			width: 144px;
+			height: 142px;
 			@media (max-width: $md3+px) {
 				top: 50px;
 				left: -52px;
@@ -46,8 +48,6 @@
 				display: none;
 			}
 		}
-	}
-	&__parallax-img {
 	}
 }
 .mistakes {

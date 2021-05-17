@@ -186,7 +186,9 @@ accordionsToggle(accordionTrigger, accordionBody);
 // -- //
 
 // Parallax
-const scenes = document.querySelectorAll('.parallax-scene');
-scenes.forEach((el) => {
-	const scene = new Parallax(el);
-});
+if (window.matchMedia("(min-width: 993px)").matches) {
+	const scenes = document.querySelectorAll('.parallax-scene');
+	scenes.forEach((el) => {
+		const scene = new Parallax(el);
+	});
+}
