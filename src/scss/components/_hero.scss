@@ -167,6 +167,9 @@
 		@media (max-width: $md3+px) {
 			padding: 0 45px;
 		}
+		@include maxwidth(370) {
+			padding: 0 15px;
+		}
 	}
 }
 
