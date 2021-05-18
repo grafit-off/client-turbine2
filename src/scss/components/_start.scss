@@ -49,6 +49,7 @@
 	&__image {
 		flex: 0 0 calc(54.7% - 80px);
 		margin-right: 80px;
+		align-self: center;
 		@media (max-width: $md1+px) {
 			margin-right: 40px;
 		}

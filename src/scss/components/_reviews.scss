@@ -223,47 +223,13 @@
 }
 .swiper-slide {
 	position: relative;
-	border: none;
-	transition: transform 0.5s ease, border 0.3s ease;
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-
-		width: 100%;
-		height: 100%;
-
-		opacity: 1;
-		background-color: #e5e5e5;
-		filter: blur(4px);
-
-		transition: opacity 1s ease;
-	}
+	border: 1px solid #8b8b8b;
+	transition: transform 0.5s ease;
 }
 
 .swiper-slide-active {
 	position: relative;
 	z-index: 2;
-	border: 1px solid #8b8b8b;
 	transform: scale(2);
-	transition: transform 0.5s ease, border 0.3s ease;
-
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		z-index: -1;
-		width: 100%;
-		height: 100%;
-
-		opacity: 0;
-		background-color: #e5e5e5;
-		filter: blur(10px);
-
-		transition: opacity 1s ease;
-	}
+	transition: transform 0.5s ease;
 }

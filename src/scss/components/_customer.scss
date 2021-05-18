@@ -162,8 +162,9 @@
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
-
+		height: 100%;
 		margin: 0 auto;
+
 		border-radius: 10px;
 		&::after {
 			content: "";
