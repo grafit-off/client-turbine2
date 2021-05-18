@@ -45,12 +45,12 @@
 
 	&__text {
 		display: block;
-		max-width: 450px;
+		max-width: 400px;
 		margin-right: 20px;
 		color: #ffffff;
 
-		font-size: 20px;
-		line-height: 27px;
+		font-size: $fz-text;
+		line-height: $lh-text;
 		@media (max-width: $md2+px) {
 			margin-right: 0;
 			margin-bottom: 50px;
@@ -68,8 +68,8 @@
 		flex: 0 0 30%;
 
 		color: #ffffff;
-		font-size: 20px;
-		line-height: 27px;
+		font-size: $fz-text;
+		line-height: $lh-text;
 		text-decoration: underline;
 		text-decoration-skip: none;
 		@media (max-width: $md3+px) {

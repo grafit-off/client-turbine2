@@ -96,7 +96,7 @@
 	text-align: center;
 	line-height: 61px / $fz-heading * 100%;
 	@media (max-width: $md1+px) {
-		font-size: 40px;
+		font-size: 30px;
 	}
 	@media (max-width: $md2+px) {
 		font-size: 30px;
@@ -115,14 +115,14 @@
 
 	display: inline-block;
 
-	padding: 41px 58px 48px 60px;
+	padding: 30px 60px 30px 60px;
 
 	color: $color-white;
 
 	font-family: $ff;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 25px;
+	font-size: 20px;
 	line-height: 30px / 25px * 100%;
 	text-align: center;
 
@@ -159,9 +159,9 @@
 		border-radius: 70px;
 	}
 	&--small {
-		padding: 22px 71px 21px;
+		padding: 20px 60px 20px 60px;
 
-		font-size: 20px;
+		font-size: 16px;
 		&::before {
 			top: 3px;
 			width: calc(100% - 6px);

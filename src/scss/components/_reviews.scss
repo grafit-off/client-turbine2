@@ -1,17 +1,15 @@
 .reviews {
-	padding-top: 134px;
-	padding-bottom: 185px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 	@media (max-width: $md2+px) {
-		padding-top: 81px;
-		padding-bottom: 99px;
+		padding-top: 35px;
+		padding-bottom: 35px;
 	}
 	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
-		max-width: 1850px;
 	}
 
 	&__heading {
@@ -31,8 +29,8 @@
 
 	width: 100%;
 
-	padding: 200px 0 250px 0;
-	margin-bottom: 150px;
+	margin-bottom: 50px;
+	padding-bottom: 60px;
 
 	&__button {
 		position: absolute;

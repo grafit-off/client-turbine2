@@ -1,9 +1,9 @@
 .functions {
-	padding-top: 177px;
-	padding-bottom: 90px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 	@media (max-width: $md2+px) {
-		padding-top: 70px;
-		padding-bottom: 70px;
+		padding-top: 35px;
+		padding-bottom: 35px;
 	}
 	&__container {
 		display: flex;
@@ -14,10 +14,8 @@
 
 	&__heading {
 		max-width: 417px;
-		margin-bottom: 102px;
-		@include maxwidth(1250) {
-			margin-bottom: 60px;
-		}
+		margin-bottom: 70px;
+
 		@media (max-width: $md3+px) {
 			margin-bottom: 26px;
 		}
@@ -75,16 +73,9 @@
 
 		font-family: $ff2;
 		font-weight: 600;
-		font-size: 30px;
-		line-height: 37px;
-		@include maxwidth(1250) {
-			font-size: 24px;
-			line-height: 35px;
-		}
-		@media (max-width: $md2+px) {
-			font-size: 20px;
-			line-height: 30px;
-		}
+		font-size: $fz-text;
+		line-height: $lh-text;
+
 		@media (max-width: $md3+px) {
 			margin-left: 0;
 
@@ -105,22 +96,14 @@
 	&__text {
 		color: #000000;
 
-		font-size: 30px;
-		line-height: 41px;
+		font-size: $fz-text;
+		line-height: $lh-text;
 
 		&:not(:last-child) {
 			margin-bottom: 45px;
 			@media (max-width: $md3+px) {
 				margin-bottom: 30px;
 			}
-		}
-		@include maxwidth(1250) {
-			font-size: 24px;
-			line-height: 35px;
-		}
-		@media (max-width: $md2+px) {
-			font-size: 20px;
-			line-height: 30px;
 		}
 		@media (max-width: $md3+px) {
 			font-size: 15px;

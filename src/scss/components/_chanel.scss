@@ -1,8 +1,8 @@
 .chanel {
 	position: relative;
 
-	padding-top: 132px;
-	padding-bottom: 142px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 
 	&::after {
 		content: "";
@@ -18,15 +18,13 @@
 		filter: blur(10px);
 	}
 	@media (max-width: $md2+px) {
-		padding-top: 90px;
-		padding-bottom: 70px;
+		padding-top: 38px;
+		padding-bottom: 38px;
 	}
 	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
-		max-width: 1275px;
 	}
 
 	&__heading {
@@ -40,13 +38,10 @@
 	&__text {
 		color: #000000;
 
-		font-size: 30px;
-		line-height: 41px;
+		font-size: $fz-text;
+		line-height: $lh-text;
 		text-align: center;
-		@include maxwidth(1250) {
-			font-size: 20px;
-			line-height: 30px;
-		}
+
 		&--margin {
 			max-width: 658px;
 			margin-bottom: 136px;
@@ -104,8 +99,8 @@
 			top: 50%;
 			left: 0;
 
-			width: 144px;
-			height: 144px;
+			width: 100px;
+			height: 100px;
 
 			transform: translate(30%, -50%);
 			@include maxwidth(1250) {
@@ -169,6 +164,7 @@
 		}
 		&--pointer {
 			align-self: flex-start;
+			margin-left: 40px;
 			@media (max-width: $md1+px) {
 				margin-left: 66px;
 			}
@@ -233,7 +229,7 @@
 	&__item-text {
 		position: relative;
 		display: inline-block;
-		padding: 60px 40px 60px 235px;
+		padding: 50px 70px 50px 135px;
 		max-width: 613px;
 
 		&::after {
@@ -251,8 +247,8 @@
 			border-radius: 15px;
 		}
 
-		font-size: 30px;
-		line-height: 41px;
+		font-size: $fz-text;
+		line-height: $lh-text;
 		text-align: left;
 
 		@media (max-width: $md1+px) {

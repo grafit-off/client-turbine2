@@ -4,16 +4,21 @@ $color-mercury: #f2f2f2;
 $color-ribbon: #0047ff;
 
 $fz-text: 18px;
-$fz-heading: 50px;
+$fz-heading: 36px;
+$lh-text: 25px / $fz-text * 100%;
 
 $ff: "OpenSans", sans-serif;
 $ff2: "Montserrat", sans-serif;
 
 $minWidth: 320;
 $maxWidth: 1920; // Разрешение макета
-$maxWidthContainer: 1620; // Разрешение контейнера
+$maxWidthContainer: 1300; // Разрешение контейнера
 
 $md1: $maxWidthContainer + 15; //desktop
 $md2: 991.98; // Tablet
 $md3: 767.98; // Mobile #1
 $md4: 400; // Mobile #2
+/* 
+	font-size: $fz-text;
+	line-height: $lh-text;
+*/

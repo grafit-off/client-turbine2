@@ -1,10 +1,10 @@
 .objective {
 	position: relative;
-	padding-top: 124px;
-	padding-bottom: 185px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 	@media (max-width: $md2+px) {
-		padding-top: 81px;
-		padding-bottom: 99px;
+		padding-top: 35px;
+		padding-bottom: 35px;
 	}
 	&::after {
 		content: "";
@@ -73,8 +73,8 @@
 		display: flex;
 		flex-direction: column;
 
-		font-size: 30px;
-		line-height: 41px;
+		font-size: $fz-text;
+		line-height: $lh-text;
 
 		&::before {
 			content: counter(objective-list);
@@ -106,13 +106,6 @@
 		}
 		@include maxwidth(1300) {
 			flex: 0 0 32%;
-			font-size: 25px;
-			line-height: 35px;
-		}
-
-		@media (max-width: $md2+px) {
-			font-size: 22px;
-			line-height: 32px;
 		}
 
 		@media (max-width: $md3+px) {

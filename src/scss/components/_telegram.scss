@@ -1,9 +1,9 @@
 .telegram {
-	padding-top: 134px;
-	padding-bottom: 185px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 	@media (max-width: $md2+px) {
-		padding-top: 81px;
-		padding-bottom: 99px;
+		padding-top: 35px;
+		padding-bottom: 35px;
 	}
 	&::after {
 		content: "";
@@ -36,7 +36,6 @@
 	&__wrapper {
 		position: relative;
 
-		width: 83%;
 		padding: 14px 18px;
 
 		border: 1px solid #8b8b8b;
@@ -88,18 +87,15 @@
 	}
 
 	&__link {
-		flex: 0 0 272px;
 		display: inline-block;
-		width: 272px;
-		height: 272px;
 		margin-right: 51px;
 
 		background: url(../img/chanel-icon-tg.png) center/contain no-repeat;
-		@include maxwidth(1435) {
-			flex: 0 0 200px;
-			width: 200px;
-			height: 200px;
-		}
+
+		flex: 0 0 200px;
+		width: 200px;
+		height: 200px;
+
 		@media (max-width: $md2+px) {
 			flex: 0 0 150px;
 			width: 150px;
@@ -139,8 +135,8 @@
 		font-family: $ff2;
 		font-style: italic;
 		font-weight: 400;
-		font-size: 50px;
-		line-height: 61px;
+		font-size: 25px;
+		line-height: 30px;
 
 		&::before {
 			content: "";
