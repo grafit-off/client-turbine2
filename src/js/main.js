@@ -34,33 +34,6 @@ if (isiPhone || isiPad || isiPod) {
 	// -- //
 }
 
-// Active header on scroll
-const header = document.querySelector(".header");
-let prevScrollpos = window.pageYOffset;
-
-function navOpen() {
-	if (prevScrollpos != 0) {
-		header.classList.add('header--active');
-	} else {
-		header.classList.remove('header--active');
-	}
-}
-function navScroll() {
-	window.onscroll = function () {
-		let currentScrollPos = window.pageYOffset;
-		if (prevScrollpos < currentScrollPos) {
-			header.classList.add('header--active');
-		} else if (prevScrollpos = currentScrollPos) {
-			header.classList.add('header--active');
-		} else {
-			header.classList.remove('header--active');
-		}
-		prevScrollpos = currentScrollPos;
-	}
-}
-navOpen()
-navScroll()
-// -- //
 
 // Video 
 const instruction = document.querySelector('.instruction');
@@ -121,8 +94,9 @@ const swiper = new Swiper(".swiper", {
 	wrapperClass: "swiper__wrapper",
 	slideClass: "swiper__slide",
 	centeredSlides: true,
-	slidesPerView: 3,
+	slidesPerView: 2,
 	loop: true,
+	spaceBetween: 50,
 	pagination: {
 		el: ".swiper__pagination",
 		clickable: true
@@ -147,7 +121,6 @@ const swiper = new Swiper(".swiper", {
 	},
 
 });
-
 
 const swiperVideosBtns = document.querySelectorAll('.video-button');
 const swiperVideos = document.querySelectorAll('.swiper-slide__video');
