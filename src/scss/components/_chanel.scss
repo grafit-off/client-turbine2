@@ -44,9 +44,9 @@
 
 		&--margin {
 			max-width: 658px;
-			margin-bottom: 136px;
-			@media (max-width: $md3+px) {
-				margin-bottom: 58px;
+			margin-bottom: 75px;
+			@media (max-width: $md1+px) {
+				margin-bottom: 30px;
 			}
 		}
 		&--strong {
@@ -75,8 +75,10 @@
 		margin: 0 auto;
 		width: 100%;
 
-		margin-bottom: 121px;
-		@include maxwidth(1250) {
+		margin-bottom: 75px;
+
+		@media (max-width: $md1+px) {
+			align-items: center;
 			margin-bottom: 30px;
 		}
 		@media (max-width: $md3+px) {
@@ -103,16 +105,14 @@
 			height: 100px;
 
 			transform: translate(30%, -50%);
-			@include maxwidth(1250) {
-				width: 100px;
-				height: 100px;
-
-				transform: translate(63%, -50%);
+			@media (max-width: $md1+px) {
+				width: 80px;
+				height: 80px;
 			}
-
 			@media (max-width: $md3+px) {
 				width: 60px;
 				height: 60px;
+				transform: translate(50%, -50%);
 			}
 			@media (max-width: $md4+px) {
 				width: 50px;
@@ -147,31 +147,40 @@
 			.chanel__item-text {
 				width: 460px;
 			}
-			@include maxwidth(1250) {
+			@media (max-width: $md1+px) {
+				margin-right: 0;
+			}
+			@include maxwidth(767) {
 				margin-right: 0;
 				.chanel__item-text {
 					width: 100%;
 				}
 			}
 		}
+		@media (max-width: $md1+px) {
+			&:nth-child(even) {
+				align-self: center;
+			}
+			&:nth-child(odd) {
+				align-self: center;
+			}
+		}
 		&:last-child {
 			&::after {
 				display: none;
-				@include maxwidth(1250) {
+				@media (max-width: $md1+px) {
 					display: block;
 				}
 			}
 		}
 		&--pointer {
 			align-self: flex-start;
-			margin-left: 40px;
-			@media (max-width: $md1+px) {
-				margin-left: 66px;
-			}
+			margin-left: 0px;
+
 			&::before {
 				background: url(../img/chanel-icon-pointer.png) center/contain no-repeat;
 			}
-			@include maxwidth(1250) {
+			@media (max-width: $md1+px) {
 				margin-right: 0;
 			}
 		}
@@ -180,7 +189,7 @@
 			&::before {
 				background: url(../img/chanel-icon-inst.png) center/contain no-repeat;
 			}
-			@include maxwidth(1250) {
+			@media (max-width: $md1+px) {
 				margin-right: 0;
 			}
 		}
@@ -194,7 +203,7 @@
 				width: 500px;
 			}
 
-			@include maxwidth(1250) {
+			@include maxwidth(767) {
 				.chanel__item-text {
 					width: 100%;
 				}
@@ -206,10 +215,11 @@
 				background: url(../img/chanel-icon-note.png) center/contain no-repeat;
 			}
 		}
-		@include maxwidth(1250) {
-			width: 100%;
+		@media (max-width: $md1+px) {
 			margin-right: 0;
 			margin-left: 0;
+		}
+		@media (max-width: $md1+px) {
 			&::after {
 				left: 50% !important;
 
@@ -224,6 +234,9 @@
 					height: 22px;
 				}
 			}
+		}
+		@include maxwidth(767) {
+			width: 100%;
 		}
 	}
 	&__item-text {
@@ -251,11 +264,7 @@
 		line-height: $lh-text;
 		text-align: left;
 
-		@media (max-width: $md1+px) {
-			font-size: 25px;
-			line-height: 30px;
-		}
-		@include maxwidth(1250) {
+		@include maxwidth(767) {
 			display: block;
 			max-width: none;
 		}
@@ -270,9 +279,10 @@
 		}
 	}
 	&__info {
-		@include maxwidth(1250) {
+		@media (max-width: $md1+px) {
 			position: relative;
 
+			max-width: 900px;
 			padding: 25px;
 
 			&::after {

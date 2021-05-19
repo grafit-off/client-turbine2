@@ -46,9 +46,9 @@
 			height: 100px;
 		}
 		&::after {
-			width: 514px;
-			height: 776px;
-			right: -10%;
+			width: 614px;
+			height: 676px;
+			right: 0%;
 		}
 	}
 	@media (max-width: $md2+px) {
@@ -68,7 +68,7 @@
 		&::after {
 			width: 254px;
 			height: 376px;
-			right: -5%;
+			right: -10%;
 		}
 	}
 	@include maxwidth(500) {
@@ -102,8 +102,15 @@
 		}
 	}
 	&__info {
-		flex: 0 0 63%;
+		flex: 0 0 50%;
+		@media (max-width: $md2+px) {
+			flex: 0 0 70%;
+		}
+
 		@include maxwidth(500) {
+			flex: 0 0 80%;
+		}
+		@include maxwidth(450) {
 			flex: 0 0 100%;
 		}
 	}
@@ -123,11 +130,12 @@
 		@media (max-width: $md1+px) {
 			font-size: 30px;
 		}
-		@media (max-width: $md2+px) {
-			font-size: 30px;
-		}
+
 		@media (max-width: $md3+px) {
 			font-size: 25px;
+		}
+		@include maxwidth(450) {
+			max-width: 80%;
 		}
 		@media (max-width: $md4+px) {
 			font-size: 23px;
@@ -154,6 +162,9 @@
 		font-family: $ff;
 		font-size: $fz-text;
 		line-height: $lh-text;
+		&--strong {
+			font-weight: 700;
+		}
 		@media (max-width: $md3+px) {
 			font-size: 14px;
 			line-height: 20px;

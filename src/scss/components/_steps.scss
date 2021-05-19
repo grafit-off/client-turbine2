@@ -40,7 +40,12 @@
 
 		width: 100%;
 		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		@media (max-width: $md3+px) {
 			flex-direction: column;
+			flex-wrap: nowrap;
 		}
 	}
 
@@ -54,11 +59,29 @@
 				margin: 0 20px;
 			}
 			@media (max-width: $md2+px) {
+				flex: 0 0 calc(50% - 20px);
 				margin: 0;
+				margin-left: 20px;
+			}
+			@media (max-width: $md3+px) {
+				flex: 0 0 100%;
+				margin-left: 0;
 			}
 		}
+
 		@media (max-width: $md2+px) {
+			flex: 0 0 calc(50% - 20px);
+			margin-right: 20px;
+
+			margin-bottom: 60px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@media (max-width: $md3+px) {
 			flex: 0 0 100%;
+			margin: 0;
 			&:not(:last-child) {
 				margin-bottom: 72px;
 			}
@@ -67,14 +90,14 @@
 }
 
 .step {
-	@media (max-width: $md2+px) {
+	@media (max-width: $md3+px) {
 		display: flex;
 		flex-direction: column;
 	}
 	&__image {
 		position: relative;
 
-		height: 453px;
+		height: 450px;
 		padding-bottom: 70px;
 
 		&::after {
@@ -91,17 +114,14 @@
 			background-color: #5381fb;
 			transform: translate(-50%, 0);
 		}
+
 		@media (max-width: $md1+px) {
-			height: 500px;
-		}
-		@include maxwidth(1300) {
 			height: 400px;
 		}
-		@media (max-width: $md2+px) {
+		@media (max-width: $md3+px) {
 			order: 1;
-
-			height: auto;
 			width: 50%;
+			height: 100%;
 
 			padding: 0px 0px 0px 0px;
 			margin: 0 auto;
@@ -119,6 +139,12 @@
 
 		border-radius: 10px;
 		object-fit: cover;
+		@media (max-width: $md2+px) {
+			object-fit: contain;
+		}
+		@media (max-width: $md3+px) {
+			object-fit: cover;
+		}
 	}
 
 	&__text {
@@ -166,9 +192,9 @@
 			transform: translate(-50%, -50%);
 		}
 		@include maxwidth(1250) {
-			padding: 40px 10px 27px;
+			padding: 30px 40px;
 		}
-		@media (max-width: $md2+px) {
+		@media (max-width: $md3+px) {
 			order: 0;
 
 			margin-bottom: 22px;

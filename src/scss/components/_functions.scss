@@ -23,7 +23,7 @@
 
 	&__item {
 		&:not(:last-child) {
-			margin-bottom: 100px;
+			margin-bottom: 60px;
 			@media (max-width: $md3+px) {
 				margin-bottom: 50px;
 			}
@@ -37,7 +37,7 @@
 	justify-content: center;
 
 	width: 100%;
-	@media (max-width: $md2+px) {
+	@media (max-width: $md3+px) {
 		flex-direction: column;
 	}
 	&__info {
@@ -47,7 +47,7 @@
 		@include maxwidth(1250) {
 			margin-right: 30px;
 		}
-		@media (max-width: $md2+px) {
+		@media (max-width: $md3+px) {
 			flex: 0 0 100%;
 			margin-right: 0;
 		}
@@ -76,6 +76,10 @@
 		font-size: $fz-text;
 		line-height: $lh-text;
 
+		@media (max-width: $md2+px) {
+			font-size: 16px;
+			line-height: 22px;
+		}
 		@media (max-width: $md3+px) {
 			margin-left: 0;
 
@@ -99,11 +103,15 @@
 		font-size: $fz-text;
 		line-height: $lh-text;
 
-		&:not(:last-child) {
+		&:not(:last-of-type) {
 			margin-bottom: 45px;
 			@media (max-width: $md3+px) {
 				margin-bottom: 30px;
 			}
+		}
+		@media (max-width: $md2+px) {
+			font-size: 16px;
+			line-height: 22px;
 		}
 		@media (max-width: $md3+px) {
 			font-size: 15px;
@@ -116,7 +124,7 @@
 
 	&__image {
 		flex: 0 1 50%;
-		@media (max-width: $md2+px) {
+		@media (max-width: $md3+px) {
 			display: none;
 		}
 	}
@@ -129,7 +137,7 @@
 		&--mobile {
 			display: none;
 		}
-		@media (max-width: $md2+px) {
+		@media (max-width: $md3+px) {
 			&--mobile {
 				display: block;
 
@@ -137,9 +145,9 @@
 				height: 50%;
 
 				margin: 0 auto;
-
+				margin-top: 30px;
 				border-radius: 10px;
-				@media (max-width: $md3+px) {
+				@include maxwidth(500) {
 					width: 100%;
 					height: 100%;
 				}
