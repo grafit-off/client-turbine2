@@ -25,6 +25,9 @@
 
 	&__list {
 		counter-reset: mistakes-list;
+		@media (max-width: $md2+px) {
+			max-width: 600px;
+		}
 	}
 
 	&__item {

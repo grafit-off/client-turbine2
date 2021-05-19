@@ -38,6 +38,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
+		@media (max-width: 1250px) {
+			width: 90%;
+		}
+		@include maxwidth(650) {
+			width: 100%;
+		}
 	}
 }
 

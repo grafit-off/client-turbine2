@@ -50,7 +50,7 @@
 			height: 252px;
 
 			background: url(../img/telegram-icon.svg) center/contain no-repeat;
-			transform: translate(198%, -47%);
+			transform: translate(145%, -47%) rotate(20deg);
 			@media (max-width: $md1+px) {
 				transform: translate(130%, -42%) rotate(20deg);
 			}
@@ -66,7 +66,7 @@
 
 	&__body {
 		position: relative;
-		padding: 15px 30px;
+		padding: 15px 70px;
 
 		display: flex;
 		align-items: center;
@@ -87,10 +87,10 @@
 	&__link {
 		display: inline-block;
 
-		flex: 0 0 150px;
-
-		width: 150px;
-		height: 150px;
+		flex: 0 0 100px;
+		width: 100px;
+		height: 100px;
+		margin: 0 20px 0 0;
 
 		background: url(../img/chanel-icon-tg.png) center/contain no-repeat;
 		@media (max-width: $md2+px) {
