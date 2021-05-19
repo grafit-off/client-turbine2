@@ -94,9 +94,7 @@ const swiper = new Swiper(".swiper", {
 	wrapperClass: "swiper__wrapper",
 	slideClass: "swiper__slide",
 	centeredSlides: true,
-	slidesPerView: 2,
 	loop: true,
-	spaceBetween: 50,
 	pagination: {
 		el: ".swiper__pagination",
 		clickable: true
@@ -106,17 +104,25 @@ const swiper = new Swiper(".swiper", {
 		prevEl: ".swiper__button--prev"
 	},
 	breakpoints: {
-		400: {
-
+		320: {
+			slidesPerView: 1.05,
+			spaceBetween: 20,
+		},
+		350: {
+			slidesPerView: 1.2,
+			spaceBetween: 20,
 		},
 		767: {
-
+			slidesPerView: 1.2,
+			spaceBetween: 50,
 		},
-		992: {
-
+		1150: {
+			slidesPerView: 1.8,
+			spaceBetween: 100,
 		},
-		1200: {
-
+		1450: {
+			slidesPerView: 2.3,
+			spaceBetween: 100,
 		}
 	},
 

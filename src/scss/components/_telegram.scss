@@ -26,8 +26,8 @@
 	}
 
 	&__heading {
-		max-width: 1201px;
-		margin-bottom: 149px;
+		max-width: 1174px;
+		margin-bottom: 60px;
 		@media (max-width: $md3+px) {
 			margin-bottom: 50px;
 		}
@@ -46,16 +46,13 @@
 			top: 0;
 			right: 0;
 
-			width: 157px;
-			height: 322px;
+			width: 100px;
+			height: 252px;
 
-			background: url(../img/telegram-icon.svg) center/cover no-repeat;
-			transform: translate(80%, -60%);
-			@include maxwidth(1635) {
-				width: 100px;
-				height: 242px;
-
-				transform: translate(80%, -70%);
+			background: url(../img/telegram-icon.svg) center/contain no-repeat;
+			transform: translate(198%, -47%);
+			@media (max-width: $md1+px) {
+				transform: translate(130%, -42%) rotate(20deg);
 			}
 			@media (max-width: $md3+px) {
 				display: none;
@@ -69,37 +66,37 @@
 
 	&__body {
 		position: relative;
-		padding: 60px 120px;
+		padding: 15px 30px;
 
 		display: flex;
 		align-items: center;
 		background-color: rgba(255, 255, 255, 0.6);
 		border-radius: 15px;
-		@include maxwidth(1635) {
-			padding: 30px 60px;
-		}
+
 		@media (max-width: $md2+px) {
 			padding: 25px 45px;
 		}
 		@media (max-width: $md3+px) {
-			padding: 70px 25px;
+			padding: 30px 15px;
+		}
+		@include maxwidth(350) {
+			padding: 30px 10px;
 		}
 	}
 
 	&__link {
 		display: inline-block;
-		margin-right: 51px;
+
+		flex: 0 0 150px;
+
+		width: 150px;
+		height: 150px;
 
 		background: url(../img/chanel-icon-tg.png) center/contain no-repeat;
-
-		flex: 0 0 200px;
-		width: 200px;
-		height: 200px;
-
 		@media (max-width: $md2+px) {
-			flex: 0 0 150px;
-			width: 150px;
-			height: 150px;
+			flex: 0 0 100px;
+			width: 100px;
+			height: 100px;
 			margin-right: 25px;
 		}
 		@media (max-width: $md3+px) {
@@ -112,10 +109,10 @@
 
 			transform: translate(0, 20%);
 		}
-		@include maxwidth(350) {
+		@include maxwidth(400) {
 			width: 70px;
 			height: 70px;
-			transform: translate(0, 70%);
+			transform: translate(0, 30%);
 		}
 	}
 
@@ -135,13 +132,14 @@
 		font-family: $ff2;
 		font-style: italic;
 		font-weight: 400;
-		font-size: 25px;
+		font-size: 20px;
 		line-height: 30px;
 
 		&::before {
 			content: "";
 
 			display: block;
+			flex: 0 0 8px;
 			width: 8px;
 			height: 8px;
 			margin-right: 25px;
@@ -149,6 +147,7 @@
 			border-radius: 50%;
 			background-color: #000;
 			@media (max-width: $md3+px) {
+				flex: 0 0 3px;
 				width: 3px;
 				height: 3px;
 				margin-right: 9px;
@@ -170,16 +169,9 @@
 		&:not(:last-child) {
 			margin-bottom: 15px;
 		}
-		@include maxwidth(1435) {
-			font-size: 30px;
-			line-height: 41px;
-		}
-		@media (max-width: $md2+px) {
-			font-size: 25px;
-			line-height: 35px;
-		}
+
 		@media (max-width: $md3+px) {
-			font-size: 20px;
+			font-size: 16px;
 			line-height: 24px;
 		}
 		@media (max-width: $md3+px) {
